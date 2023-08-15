@@ -19,7 +19,6 @@ body {
 }
 
 .name {
-    width: 180px;
     height: 25px;
     color: #FFFFFF;
     text-align: center;
@@ -32,11 +31,10 @@ body {
 }
 
 .profession {
-    width: 180px;
     height: 15px;
     color: #F3BF99;
+    display: block;
     text-align: center;
-    margin: 7px 70px 9px 70px;
     font-family: Inter;
     font-size: 13px;
     font-style: normal;
@@ -45,8 +43,8 @@ body {
 }
 
 .portfolio {
-    width: 228px;
-    height: 16px;
+    height: 20px;
+    margin: 9px 45px 0px 45px;
     justify-content: center;
     color: #F5F5F5;
     text-align: center;
@@ -69,9 +67,7 @@ body {
     width: 115px;
     height: 35px;
     border-radius: 6px;
-    
-    /* shadow/sm */
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    border-style: none;
     display: flex;
     padding: 9px 13px 9px 11px;
     justify-content: center;
@@ -88,16 +84,23 @@ body {
     background: var(--white, #FFF);
 }
 
-.sub-title {
-    width: 242.712px;
-height: 21px;
-flex-shrink: 0;
-color: #F5F5F5;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; /* 24px */
+.sub-title, .sub-title-about, .sub-title-interests {
+    height: 21px;
+    flex-shrink: 0;
+    color: #F5F5F5;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+}
+
+.sub-title-about {
+    margin: 33px 35px 5px 35px;
+}
+
+.sub-title-interests {
+    margin: 27px 35px 5px 35px;
 }
 
 .info {
@@ -107,16 +110,23 @@ line-height: 150%; /* 24px */
     background: #1A1B21;
 }
 
-.info-para {
-    width: 247px;
-    height: 61px;
-    flex-shrink: 0;
+.info-para, .info-para-about, .info-para-interests {
     color: #DCDCDC;
     font-family: Inter;
-    font-size: 10.24px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 15.36px */
+}
+
+.info-para-about {
+    margin: 5px 35px 25px 35px;
+    height: 40px;
+}
+
+.info-para-interests {
+    margin: 5px 35px 25px 35px;
+    height: 65px;
 }
 
 .footer-icons {
