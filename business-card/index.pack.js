@@ -403,70 +403,70 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
     return _react2.default.createElement(
         "div",
-        { "class": "main-card" },
-        _react2.default.createElement("img", { "class": "main-image", src: "./images/profile.png" }),
+        { className: "main-card" },
+        _react2.default.createElement("img", { className: "main-image", src: "./images/profile.png" }),
         _react2.default.createElement(
             "div",
-            { "class": "info" },
+            { className: "info" },
             _react2.default.createElement(
                 "h2",
-                { "class": "name" },
+                { className: "name" },
                 " Anurag Peddi "
             ),
             _react2.default.createElement(
                 "h3",
-                { "class": "profession" },
+                { className: "profession" },
                 " Student "
             ),
             _react2.default.createElement(
                 "a",
-                { "class": "portfolio", href: "anuraganalog.github.io" },
+                { className: "portfolio", href: "anuraganalog.github.io" },
                 " anuraganalog.github.io "
             ),
             _react2.default.createElement(
                 "div",
-                { "class": "connect-icons" },
+                { className: "connect-icons" },
                 _react2.default.createElement(
                     "button",
-                    { "class": "connect-icon-email", onclick: "window.location.href='mailto:anurag.peddi1998@gmail.com';" },
+                    { className: "connect-icon-email", onclick: "window.location.href='mailto:anurag.peddi1998@gmail.com';" },
                     _react2.default.createElement("img", { src: "./images/Mail.svg" }),
                     "Email"
                 ),
                 _react2.default.createElement(
                     "button",
-                    { "class": "connect-icon-linkedin", onclick: "window.location.href='https://www.linkedin.com/in/peddi-anurag-01767a166/';" },
+                    { className: "connect-icon-linkedin", onclick: "window.location.href='https://www.linkedin.com/in/peddi-anurag-01767a166/';" },
                     _react2.default.createElement("img", { src: "./images/LinkedIn.svg" }),
                     "LinkedIn"
                 )
             ),
             _react2.default.createElement(
                 "h3",
-                { "class": "sub-title-about" },
+                { className: "sub-title-about" },
                 " About "
             ),
             _react2.default.createElement(
                 "p",
-                { "class": "info-para-about" },
+                { className: "info-para-about" },
                 "I am frontend developer, with a knowledge also in machine and deep learning framworks."
             ),
             _react2.default.createElement(
                 "h3",
-                { "class": "sub-title-interests" },
+                { className: "sub-title-interests" },
                 " Interests "
             ),
             _react2.default.createElement(
                 "p",
-                { "class": "info-para-interests" },
+                { className: "info-para-interests" },
                 "I am interested in learning new technologies and frameworks. I have started learning cooking, and skating has also been one of my favourite hobbies."
             )
         ),
         _react2.default.createElement(
             "footer",
-            { "class": "footer-icons" },
-            _react2.default.createElement("img", { "class": "footer-icon", src: "./images/Twitter Icon.svg" }),
-            _react2.default.createElement("img", { "class": "footer-icon", src: "./images/Instagram Icon.svg" }),
-            _react2.default.createElement("img", { "class": "footer-icon", src: "./images/Facebook Icon.svg" }),
-            _react2.default.createElement("img", { "class": "footer-icon", src: "./images/GitHub Icon.svg" })
+            { className: "footer-icons" },
+            _react2.default.createElement("img", { className: "footer-icon", src: "./images/Twitter Icon.svg" }),
+            _react2.default.createElement("img", { className: "footer-icon", src: "./images/Instagram Icon.svg" }),
+            _react2.default.createElement("img", { className: "footer-icon", src: "./images/Facebook Icon.svg" }),
+            _react2.default.createElement("img", { className: "footer-icon", src: "./images/GitHub Icon.svg" })
         )
     );
 }
