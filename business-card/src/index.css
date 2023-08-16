@@ -1,0 +1,147 @@
+body {
+  background: #fff;
+}
+
+.main-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  width: 340px;
+  height: 420px;
+  border-radius: 10px 10px 0 0;
+  background: url(./images/profile.png), lightgray -207.665px -133.577px / 210.625% 315.631% no-repeat; 
+}
+
+.name {
+  height: 25px;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 20px 70px;
+}
+
+.profession {
+  height: 15px;
+  color: #F3BF99;
+  display: block;
+  text-align: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.portfolio {
+  height: 15px;
+  color: #F5F5F5;
+  display: block;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10.24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.connect-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-icon, .connect-icon-email, .connect-icon-linkedin {
+  margin: 8px;
+  width: 115px;
+  height: 35px;
+  border-radius: 6px;
+  border-style: none;
+  display: flex;
+  padding: 9px 13px 9px 11px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.connect-icon-linkedin {
+  background: #5093E2;
+}
+
+.connect-icon-email {
+  border: 1px solid var(--gray-300, #D1D5DB);
+  background: var(--white, #FFF);
+}
+
+.sub-title, .sub-title-about, .sub-title-interests {
+  height: 21px;
+  flex-shrink: 0;
+  color: #F5F5F5;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+}
+
+.sub-title-about {
+  margin: 33px 35px 5px 35px;
+}
+
+.sub-title-interests {
+  margin: 27px 35px 5px 35px;
+}
+
+.info {
+  width: 340px;
+  height: 400px;
+  flex-shrink: 0;
+  background: #1A1B21;
+}
+
+.info-para, .info-para-about, .info-para-interests {
+  color: #DCDCDC;
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 15.36px */
+}
+
+.info-para-about {
+  margin: 5px 35px 25px 35px;
+  height: 40px;
+}
+
+.info-para-interests {
+  margin: 5px 35px 25px 35px;
+  height: 65px;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 0px 10px 10px;
+  background: #161619;
+  width: 340px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.footer-icon {
+  width: 25px;
+  height: 25px;
+  margin: 12px;
+}
