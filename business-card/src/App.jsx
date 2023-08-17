@@ -3,7 +3,7 @@ import React from "react";
 function App() {
   return (
     <div className="main-card">
-    <img className="main-image" src="/src/assets/profile.png" />
+    <img className="main-image" src="/src/assets/images/profile.png" />
 
     <div className="info">
         <h2 className="name"> Anurag Peddi </h2>
@@ -12,11 +12,11 @@ function App() {
 
         <div className="connect-icons">
             <button className="connect-icon-email" onclick="window.location.href='mailto:anurag.peddi1998@gmail.com';">
-                <img src="/src/assets/Mail.svg" />
+                <img src="/src/assets/images/Mail.svg" />
                 Email
             </button>
             <button className="connect-icon-linkedin" onclick="window.location.href='https://www.linkedin.com/in/peddi-anurag-01767a166/';">
-                <img src="/src/assets/LinkedIn.svg" />
+                <img src="/src/assets/images/LinkedIn.svg" />
                 LinkedIn
             </button>
         </div>
@@ -36,13 +36,13 @@ function App() {
     </div>
 
     <footer className="footer-icons">
-        <img className="footer-icon" src="/src/assets/Twitter Icon.svg" />
-        <img className="footer-icon" src="/src/assets/Instagram Icon.svg" />
-        <img className="footer-icon" src="/src/assets/Facebook Icon.svg" />
-        <img className="footer-icon" src="/src/assets/GitHub Icon.svg" />
+        <img className="footer-icon" src="/src/assets/images/Twitter Icon.svg" />
+        <img className="footer-icon" src="/src/assets/images/Instagram Icon.svg" />
+        <img className="footer-icon" src="/src/assets/images/Facebook Icon.svg" />
+        <img className="footer-icon" src="/src/assets/images/GitHub Icon.svg" />
     </footer>
 </div>
   )
 }
 
-export default App
+export default App;
