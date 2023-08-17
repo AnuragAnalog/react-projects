@@ -1,4 +1,4 @@
-data [
+const data = [
     {
         title: "Mount Fuji",
         location: "Japan",
