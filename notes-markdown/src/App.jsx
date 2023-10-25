@@ -1,25 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "/src/components/Sidebar";
 import Editor from "/src/components/Editor";
 import { data } from "/src/assets/data";
 import Split from "react-split";
 import { nanoid } from "nanoid";
 
-console.log(data);
-
-/**
- * Challenge: Spend 10-20+ minutes reading through the code
- * and trying to understand how it's currently working. Spend
- * as much time as you need to feel confident that you 
- * understand the existing code (although you don't need
- * to fully understand everything to move on)
- */
-
 function App() {
-    const [notes, setNotes] = useState([])
+    var initNotes = () => JSON.parse(localStorage.getItem("notes")) || []
+
+    const [notes, setNotes] = useState(initNotes)
     const [currentNoteId, setCurrentNoteId] = useState(
         (notes[0] && notes[0].id) || ""
     )
+
+    useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes))
+    }, [notes])
     
     function createNewNote() {
         const newNote = {
@@ -31,11 +27,28 @@ function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
+        setNotes(oldNotes => {
+          var newNotes = [];
+
+          for (var i = 0; i < oldNotes.length; i++) {
+            var oldNote = oldNotes[i];
+            
+            if (oldNote.id === currentNoteId) {
+              newNotes.unshift({...oldNote, body: text})
+            } else {
+              newNotes.push(oldNote)
+            }
+          }
+
+          return newNotes;
+        })
+    }
+
+    function deleteNote(event, noteId) {
+      event.stopPropagation()
+      setNotes(
+        oldNotes => oldNotes.filter((note) => (note.id !== noteId))
+      )
     }
     
     function findCurrentNote() {
@@ -59,6 +72,7 @@ function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
@@ -79,7 +93,6 @@ function App() {
                     Create one now
                 </button>
             </div>
-            
         }
         </main>
     )
