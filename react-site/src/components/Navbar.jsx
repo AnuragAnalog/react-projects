@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-export default function Navbar(props) {
+function Navbar(props) {
     return (
          <nav 
             className={props.darkMode ? "dark": ""}
@@ -26,3 +26,5 @@ export default function Navbar(props) {
         </nav>
     )
 }
+
+export default Navbar;
