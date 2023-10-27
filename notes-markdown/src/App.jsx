@@ -14,6 +14,8 @@ function App() {
 
     const currentNote = notes.find(note => note.id === currentNoteId) || notes[0]
 
+    const sortedNotes = notes.sort((item1, item2) => item2.updatedAt - item1.updatedAt)
+
     useEffect(() => {
         const unsubscribe = onSnapshot(notesCollection, function(snapshot) {
             // Sync the changes from the firestore database
@@ -67,7 +69,7 @@ function App() {
                 className="split"
             >
                 <Sidebar
-                    notes={notes}
+                    notes={sortedNotes}
                     currentNote={currentNote}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
