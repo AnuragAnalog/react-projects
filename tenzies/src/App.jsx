@@ -1,9 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '/src/App.css'
 
 import Dice from "/src/components/Dice.jsx"
 
 function App() {
+  const initDice = []
+
+  for (var i = 0; i < 10; i++) {
+    initDice.push(parseInt(Math.random()*9)%9+1)
+  }
+
+  const [dice, setDice] = useState(initDice)
+  const [diceFace, setDiceFace] = useState("")
+
+  useEffect(() => {
+    setDiceFace(dice.map((die) => {
+      return <Dice value={die}/>
+    }))
+  }, [dice])
 
   return (
     <>
@@ -14,16 +28,7 @@ function App() {
           </div>
 
           <div className="dices">
-            <Dice value={1} />
-            <Dice value={2} />
-            <Dice value={1} />
-            <Dice value={4} />
-            <Dice value={1} />
-            <Dice value={1} />
-            <Dice value={5} />
-            <Dice value={1} />
-            <Dice value={8} />
-            <Dice value={1} />
+            {diceFace}
           </div>
 
           <div className="button">

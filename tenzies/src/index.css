@@ -51,8 +51,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   background: #59E391;
+  cursor: pointer;
+}
+
+.die-value {
+  font-size: 2rem;
 }
 
 .button {
