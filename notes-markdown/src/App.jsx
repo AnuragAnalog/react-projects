@@ -14,7 +14,6 @@ function App() {
     const [tempNoteText, setTempNoteText] = useState("")
 
     const currentNote = notes.find(note => note.id === currentNoteId) || notes[0]
-
     const sortedNotes = notes.sort((item1, item2) => item2.updatedAt - item1.updatedAt)
 
     useEffect(() => {
