@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Dice(props) {
     return (
-        <div className="dice">
+        <div key={props.uniqueId} onClick={props.onClick} className="dice">
             <h2 className="die-value">
                 {props.value}
             </h2> 

@@ -1,21 +1,39 @@
 import { useState, useEffect } from 'react'
+import { nanoid } from "nanoid"
 import '/src/App.css'
 
 import Dice from "/src/components/Dice.jsx"
 
 function App() {
-  const initDice = []
+  function allNewDice() {
+    const initDice = []
 
-  for (var i = 0; i < 10; i++) {
-    initDice.push(parseInt(Math.random()*9)%9+1)
+    for (var i = 0; i < 10; i++) {
+      initDice.push({
+        "id": nanoid(),
+        "value": parseInt(Math.random()*6)%6+1,
+        "isHeld": false
+      })
+    }
+
+    return initDice
   }
 
-  const [dice, setDice] = useState(initDice)
+  function holdDice(e) {
+    const value = e.target.key
+    console.log(value)
+  }
+
+  function rollDice() {
+    setDice(allNewDice())
+  }
+
+  const [dice, setDice] = useState(allNewDice())
   const [diceFace, setDiceFace] = useState("")
 
   useEffect(() => {
     setDiceFace(dice.map((die) => {
-      return <Dice value={die}/>
+      return <Dice key={die["id"]} uniqueId={die["id"]} onClick={holdDice} value={die["value"]}/>
     }))
   }, [dice])
 
@@ -31,7 +49,8 @@ function App() {
             {diceFace}
           </div>
 
-          <div className="button">
+          <div className="button-area">
+              <button onClick={rollDice} className="button"> Roll Dice </button>
           </div>
         </div>
       </main>
