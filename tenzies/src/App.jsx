@@ -12,16 +12,15 @@ function App() {
       initDice.push({
         "id": nanoid(),
         "value": parseInt(Math.random()*6)%6+1,
-        "isHeld": false
+        "isHeld": true
       })
     }
 
     return initDice
   }
 
-  function holdDice(e) {
-    const value = e.target.key
-    console.log(value)
+  function holdDice(id) {
+    console.log(id)
   }
 
   function rollDice() {
@@ -33,7 +32,7 @@ function App() {
 
   useEffect(() => {
     setDiceFace(dice.map((die) => {
-      return <Dice key={die["id"]} uniqueId={die["id"]} onClick={holdDice} value={die["value"]}/>
+      return <Dice key={die["id"]} isHeld={die["isHeld"]} onClick={() => holdDice(die["id"])} value={die["value"]}/>
     }))
   }, [dice])
 
