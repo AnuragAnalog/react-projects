@@ -12,7 +12,7 @@ function App() {
       initDice.push({
         "id": nanoid(),
         "value": parseInt(Math.random()*6)%6+1,
-        "isHeld": true
+        "isHeld": false
       })
     }
 
@@ -20,11 +20,24 @@ function App() {
   }
 
   function holdDice(id) {
-    console.log(id)
+    setDice(dice.map((die) => {
+      return {
+      ...die,
+      "isHeld": id === die["id"] ? !die["isHeld"] : die["isHeld"]
+      }
+    }))
   }
 
   function rollDice() {
-    setDice(allNewDice())
+    var newDiceVal = allNewDice()
+
+    setDice(dice.map((die, index) => {
+      console.log(newDiceVal[index])
+      return {
+        ...die,
+        "value": die["isHeld"] ? die["value"] : newDiceVal[index]["value"]
+      }
+    }))
   }
 
   const [dice, setDice] = useState(allNewDice())
