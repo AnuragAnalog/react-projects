@@ -7,3 +7,5 @@ My React JS Projects
 * Tenzies
 * Travel Journal
 * React Site
+* Meme Generator
+* AirBnB Clone
