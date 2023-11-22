@@ -77,7 +77,7 @@ function App() {
     return (
         <main>
         {
-            notes.length > 0 
+            notes.length > 0
             ?
             <Split 
                 sizes={[30, 70]} 
